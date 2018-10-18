@@ -1,0 +1,18 @@
+#!/bin/bash
+
+read -p "Enter a number: " number
+if [[ $((number % 2)) -eq 0 ]]; then
+	even="$number is even";
+	echo $even;
+	echo $even >> test4;
+else
+	odd="$number is odd";
+	echo $odd;
+	echo $odd >> test4;
+	
+fi
+
+read -p "Would you like to delete test3 file? " ans
+if [[ ans -eq yes ]]; then
+	rm -rf test4;
+fi 
