@@ -1,0 +1,16 @@
+while read -p "Enter a number (if finished, press Ctrl+d): " line
+ 
+do
+        my_array=("${my_array[@]}" $line)
+if
+	! (( $line % 3 )); then
+	echo fizz;
+
+elif
+	! (( $line % 5 )); then
+	echo Buzz!;
+fi
+done
+	
+echo ${my_array[@]}
+

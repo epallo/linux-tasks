@@ -1,0 +1,4 @@
+#!/bin/bash
+
+read -p "Enter username: " username
+id $username | grep $username | cut -d ' ' -f 1-2
